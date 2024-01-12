@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color-text-second);
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root {
+    --bg-card: #17141d;
+    --color-white: rgb(204, 204, 204);
+    --color-text-main: rgb(255, 255, 255);
+    --color-text-second: rgb(209, 209, 209);
+    --color-text-third:#ffa755 ;
+}
+
+body {
+    display: flex;
+    background-color: var(--bg-card);
+}
+
+form {
+    margin: 80px auto;
+}
+.card {
+    position: relative;
+    width: 60vh;
+    height: auto;
+    margin: 0px 5px 10px; 
+    border-radius: 5px;
+    padding: 15px;
+    background-color: var(--bg-card);
+    box-shadow: -1rem 0 3rem black;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.img-circle {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--bg-card);
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x:-50px ;
+    border: 5px solid black;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%); 
+
+}
+.img-circle a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: rgba(172, 172, 172, 0.753);
+    letter-spacing: 1px;
+
+}
+.card .tugas .title {
+    /* untuk label juga */
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    /* supaya ada ruang untuk gambar */
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+.card .tugas .title input {
+    border: 1px solid var(--color-white);
+    outline: none;
+    background: transparent;
+    height: 40px;
+    color: var(--color-text-second);
+    font-size: 15px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card .tugas .title input:focus {
+    border: 1px solid var(--color-text-third);
+    /* color: var(--color-text-third) */
+}
+
+.card .tugas .description{
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    transition: .2s;
+
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-bottom: 100px;
+
+}
+.card .tugas .description label {
+    background: linear-gradient(90deg, var(--color-text-third), rgb(224, 44, 83));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 10px;
+}
+.card .tugas .description textarea {
+    width: 100%;
+    height: 245px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--color-white);
+    background: transparent;
+    padding: 5px 10px;
+    font-size: 15px;
+    overflow-y: auto;
+    word-wrap: break-word;
+
+}
+.card .tugas .description textarea:focus {
+    border: 1px solid var(--color-text-third);
+    /* color: var(--color-text-third) */
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(61, 61, 61);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+.card .nama-pelajaran {
+    display: flex;
+    flex-direction:column;
+}
+.card .nama-pelajaran label {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.card .nama-pelajaran input {
+    border: 1px solid var(--color-white);
+    outline: none;
+    height: 35px;
+    font-size: 15px;
+    background: transparent;
+    border-radius: 5px; 
+    padding: 3px 10px;
+
+}
+
+.card .nama-pelajaran input:focus {
+    border: 1px solid var(--color-text-third);
+    /* color: var(--color-text-third) */
+}
+
+
+
+.card .due-date {
+    margin: 18px 0 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+.card .due-date label{
+    font-size: 17px;
+    color: rgb(255, 115, 115);
+    margin-bottom: 10px;
+}
+
+.card .due-date input {
+    font-size: 15px;
+    color: rgb(255, 91, 91);
+    border: 1px solid var(--color-white);
+    outline: none;
+    padding: 3px 10px;
+    color: var(--color-text-second);
+    background: transparent;
+    border-radius: 5px;
+    height: 35px;
+
+}
+
+.card .due-date input:focus {
+    border: 1px solid var(--color-text-third);
+    /* color: var(--color-text-third); */
+}
+
+
+
+form .card .submitBTN{
+    margin-top: 30px;
+    width: 100%;
+    display: block;
+    border: none;
+    background: linear-gradient(90deg, var(--color-text-third), rgb(224, 44, 83));
+    color: var(--color-text-main);
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .2s;
+    
+}
+form .card .submitBTN:hover{
+    opacity: .85;
+}
+
+
+
+/* registration page */
+.registrationContainer, .loginContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainloginregis{
+    background:linear-gradient(90deg, #f17400, #f33572);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 45px;
+    font-weight: 500;
+    position: relative;
+}
+
+.mainloginregis::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background:linear-gradient(90deg, #f17400, #f33572);
+}
+
+.navloginregis {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navloginregis a {
+    background:linear-gradient(90deg,#415060, var(--color-text-second));
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+    font-size: 45px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navloginregis a:hover {
+    opacity: .6;
+
+}
+
+.loginContainer .mainloginregis {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 5px solid var(--color-text-second);
+}
+
+.registrationContainer .navloginregis a {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 5px solid var(--color-text-second);
+}
+
+.formloginregis {
+    width: 100%;
+    max-width: 400px;
+    /* background: salmon; */
+}
+
+.formloginregis ul li {
+    list-style: none;
+}
+
+.formloginregis ul label{
+    background:linear-gradient(90deg, #fd9b9b, #eb946c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.formloginregis ul li + li {
+    margin-top: 12px;
+}
+
+.formloginregis label {
+    text-transform: capitalize;
+}
+
+.formloginregis input {
+    margin-top: .2rem;
+    width: 100%;
+    background: transparent;
+    border: 1px solid gray; 
+    padding: .25rem .5rem;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.formloginregis button {
+    padding: 6px 46px;
+    width: 100%;
+    color: white;
+    background: linear-gradient(90deg, rgb(253, 46, 80), rgb(253, 70, 208));
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    margin-top: 20px;
+    font-size: 18px;
+    animation: gradient 7s linear infinite;
+    cursor: pointer;
+}
+
+.loginContainer .formloginregis .rememberMe {
+    display: flex;
+    align-items: center;
+}
+
+.rememberMe #remember {
+    width: 20px;
+    height: 20px;
+    background: var(--bg-card);
+    margin-right: 15px;
+    margin-top: 0;
+}
+
+.rememberMe label {
+    color: salmon;
+}
+
+@keyframes gradient {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@media (min-width: 640px){
+    .mainloginregis {
+        font-size: 50px;
+    }
+
+    .navloginregis a {
+        font-size: 50px;
+    }
+}
